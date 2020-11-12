@@ -53,7 +53,7 @@ data class FlutterModelField(val map: Map<String, Any>) {
     fun convertToNativeModelField(): ModelField {
         var builder: ModelField.ModelFieldBuilder = ModelField.builder()
                 .name(name)
-                .type(getJavaClass(type))
+                .javaClassForValue(getJavaClass(type))
                 .isArray(isArray)
                 .isEnum(isEnum)
                 .isRequired(isRequired)
